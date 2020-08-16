@@ -1,0 +1,19 @@
+{
+  "name": "jean-grid",
+  "version": "1.0.0",
+  "description": "Provides a simple css grid",
+  "main": "dist/jean-grid.js",
+  "scripts": {
+    "test": "open spec/spec-runner.html in browser"
+  },
+  "keywords": [],
+  "author": "Jeremias Andris",
+  "license": "MIT",
+  "dependencies": {
+    "jean-amd": "1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/je-an/jean-grid.git"
+  }
+}

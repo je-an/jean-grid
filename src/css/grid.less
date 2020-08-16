@@ -1,0 +1,69 @@
+/*
+ * The purpose of the container is to set the width of the entire grid.
+ * The width of the container is generally 100%, but you might want to set a max-width for larger displays.
+ *
+ */
+ .jean-grid-container {
+	width: 100%;
+	max-width: 1920px;
+}
+/*
+ *
+ * The purpose of the row element is to keep the columns inside it from overflowing onto other rows.
+ * To achieve this, we'll use the clearfix hack to make sure everything inside the row stays inside the row
+ *
+ */
+.jean-grid-row:before, .jean-grid-row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+/*
+ * The purpose of a column is to place content side by side.
+ * float: place columns side by side
+ * min-height: if the columns are empty, they will stack on top of each other. to prevent this we need a min-height --> only if needed	
+ * padding: set gutters arround the  content within columns --> only if needed	
+ * box-sizing: width of border-box = Border + Padding + Content
+ */
+div[class*="jean-grid-10-col-"], div[class*="jean-grid-12-col-"], div[class*="jean-grid-13-col-"], div[class*="jean-grid-col-"]{
+    float: left;
+    min-height: 1px; 
+    padding: 2px;
+    box-sizing: border-box;
+}
+/** 
+ * Column width divided by 10
+ * width: the widths of one column. To calculate this value, you have to divide the container witdh by the total numbers of columns
+*/
+.jean-grid-10-col-1{width: 10%; }
+.jean-grid-10-col-2{width: 20%; }
+.jean-grid-10-col-3{width: 30%; }
+.jean-grid-10-col-4{width: 40%; }
+.jean-grid-10-col-5{width: 50%; }
+.jean-grid-10-col-6{width: 60%; }
+.jean-grid-10-col-7{width: 70%; }
+.jean-grid-10-col-8{width: 80%; }
+.jean-grid-10-col-9{width: 90%; }
+.jean-grid-10-col-10{width: 100%; }
+
+/* Column width divided by 12*/
+.jean-grid-12-col-1{width: 8.333333333333%; }
+.jean-grid-12-col-2{width: 16.6%; }
+.jean-grid-12-col-3{width: 25%; }
+.jean-grid-12-col-4{width: 33.3%; }
+.jean-grid-12-col-5{width: 41.5%; }
+.jean-grid-12-col-6{width: 50%; }
+.jean-grid-12-col-7{width: 58.1%; }
+.jean-grid-12-col-8{width: 66.4%; }
+.jean-grid-12-col-9{width: 74.7%; }
+.jean-grid-12-col-10{width: 83%; }
+.jean-grid-12-col-11{width: 91.3%; }
+.jean-grid-12-col-12{width: 100%; }
+
+/* spezial columns */
+.jean-grid-col-20per{width: 20%; }
+.jean-grid-col-25per{width: 25%; }
+.jean-grid-col-50per{width: 50%; }
+.jean-grid-col-75per{width: 75%; }
+.jean-grid-col-100per{width: 100%; }
+	
